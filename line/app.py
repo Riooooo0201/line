@@ -1,4 +1,5 @@
 from flask import Flask, request, abort, render_template, jsonify
+from flask_cors import CORS
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
@@ -28,6 +29,7 @@ FIREBASE_KEY_JSON = os.environ.get('FIREBASE_KEY_JSON')
 # FlaskとLINE SDKの初期化
 # ====================
 app = Flask(__name__)
+CORS(app) # CORSを有効にする
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN) 
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
