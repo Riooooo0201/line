@@ -1,0 +1,5 @@
+Flask
+line-bot-sdk
+sqlalchemy
+ngrok
+firebase-admin
