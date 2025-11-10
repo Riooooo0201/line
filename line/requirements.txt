@@ -4,3 +4,4 @@ sqlalchemy
 ngrok
 firebase-admin
 gunicorn
+flask-cors
